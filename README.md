@@ -41,7 +41,7 @@ setup/
   bootstrap.sh
   test-bash.sh
   run-test-bash.sh
-
+```
 ## Portability model
 
 There are three layers:
