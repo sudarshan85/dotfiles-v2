@@ -18,11 +18,11 @@ PS1="\e[1;32m[\u@\h \W]\$ \e[m "
 #PS1='\[\e[32m\]\u@\h:\W\$ \[\e[0m\]'
 
 # source common config
-[ -f "$HOME/dotfiles-v2/shell/common/exports" ] && source "$HOME/dotfiles-v2/shell/common/exports"
-[ -f "$HOME/dotfiles-v2/shell/common/aliases" ] && source "$HOME/dotfiles-v2/shell/common/aliases"
-[ -f "$HOME/dotfiles-v2/shell/common/functions" ] && source "$HOME/dotfiles-v2/shell/common/functions"
+[ -f "$HOME/.dotfiles-v2/shell/common/exports" ] && source "$HOME/.dotfiles-v2/shell/common/exports"
+[ -f "$HOME/.dotfiles-v2/shell/common/aliases" ] && source "$HOME/.dotfiles-v2/shell/common/aliases"
+[ -f "$HOME/.dotfiles-v2/shell/common/functions" ] && source "$HOME/.dotfiles-v2/shell/common/functions"
 
 # source linux config
-[ -f "$HOME/dotfiles-v2/shell/linux/exports" ] && source "$HOME/dotfiles-v2/shell/linux/exports"
-[ -f "$HOME/dotfiles-v2/shell/linux/aliases" ] && source "$HOME/dotfiles-v2/shell/linux/aliases"
-[ -f "$HOME/dotfiles-v2/shell/linux/functions" ] && source "$HOME/dotfiles-v2/shell/linux/functions"
+[ -f "$HOME/.dotfiles-v2/shell/linux/exports" ] && source "$HOME/.dotfiles-v2/shell/linux/exports"
+[ -f "$HOME/.dotfiles-v2/shell/linux/aliases" ] && source "$HOME/.dotfiles-v2/shell/linux/aliases"
+[ -f "$HOME/.dotfiles-v2/shell/linux/functions" ] && source "$HOME/.dotfiles-v2/shell/linux/functions"
