@@ -1,0 +1,59 @@
+" --- plugins ---
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-commentary'
+Plug 'flazz/vim-colorschemes'
+
+call plug#end()
+
+" --- basics ---
+set nocompatible
+filetype plugin indent on
+syntax on
+
+set number
+set relativenumber
+set mouse=a
+
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+set hidden
+set nowrap
+
+" --- tabs / indent ---
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+
+" --- UI ---
+set scrolloff=5
+set signcolumn=yes
+set colorcolumn=101
+
+" --- leader ---
+let mapleader=","
+
+" --- key mappings ---
+imap jj <Esc>
+
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>h :nohlsearch<CR>
+
+" window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" --- colors ---
+set background=dark
+colorscheme mopkai
+
+" --- cleanup trailing whitespace ---
+autocmd BufWritePre *.py,*.sh,*.zsh,*.md,*.txt %s/\s\+$//e
+nnoremap ; :

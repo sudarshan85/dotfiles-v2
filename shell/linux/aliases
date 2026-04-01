@@ -1,6 +1,5 @@
 # --- linux / wsl specific utilities ---
 alias mem='watch -n 5 free -m'
-alias ctrlc='xclip -sel clip'
 alias pytree='tree -I "__pycache__|.*" --charset=ascii | sed -e "s/\[.*\]//g" -e "s/^ *//g"'
 
 # --- apt / package management ---
@@ -20,7 +19,7 @@ alias gls='gcloud compute instances list'
 alias du='du -kh'
 alias df='df -kTh'
 
-# --- GNU ls family ---
+# --- GNU ls / tree ---
 alias ls='ls -h --color'
 alias lx='ls -lXB'
 alias lk='ls -lSr'
@@ -32,3 +31,7 @@ alias lm='ll | more'
 alias lr='ll -R'
 alias la='ll -A'
 alias tree='tree -Csuh'
+
+# --- misc utilities used only on linux ---
+alias yd='yt-dlp -x --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias ydp='yt-dlp -x --audio-format mp3 -o "%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"'
