@@ -12,3 +12,34 @@ fsearch() {
 act() {
   source "$1/bin/activate"
 }
+
+show() {
+  local query="$1"
+
+  if [ -z "$query" ]; then
+    echo "Usage: show <pattern>"
+    return 1
+  fi
+
+  local base="$HOME/.dotfiles-v2/shell"
+
+  echo "== Aliases =="
+  grep -RIn --color=auto "^alias" "$base" | grep -i --color=auto "$query"
+
+  echo
+  echo "== Functions =="
+  grep -RIn --color=auto "()" "$base" | grep -i --color=auto "$query"
+}
+
+src() {
+  if [ -n "$ZSH_VERSION" ]; then
+    source ~/.zshrc
+    echo "Sourced ~/.zshrc"
+  elif [ -n "$BASH_VERSION" ]; then
+    source ~/.bashrc
+    echo "Sourced ~/.bashrc"
+  else
+    echo "Unknown shell"
+    return 1
+  fi
+}
