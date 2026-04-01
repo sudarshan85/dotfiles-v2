@@ -1,4 +1,7 @@
-# --- shell options ---
+# only run for interactive shells
+[[ -o interactive ]] || return
+
+# history
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
@@ -9,25 +12,27 @@ setopt SHARE_HISTORY
 setopt AUTO_CD
 setopt EXTENDED_GLOB
 
-# --- completion ---
+# completion
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
 
-# --- prompt ---
+# prompt (mac version of your bash prompt)
 autoload -Uz colors && colors
 setopt PROMPT_SUBST
-PROMPT='%F{green}%n@%m%f:%F{blue}%1~%f %# '
+PROMPT='%B%F{green}[%n@%m %1~]%% %f%b '
 
-# --- keybindings ---
+# keybindings
 bindkey -e
 
-# --- source shared config ---
+# source common config
 [[ -f "$HOME/.dotfiles-v2/shell/common/exports" ]] && source "$HOME/.dotfiles-v2/shell/common/exports"
 [[ -f "$HOME/.dotfiles-v2/shell/common/aliases" ]] && source "$HOME/.dotfiles-v2/shell/common/aliases"
 [[ -f "$HOME/.dotfiles-v2/shell/common/functions" ]] && source "$HOME/.dotfiles-v2/shell/common/functions"
 
-# --- source macOS-specific config ---
+# source macOS-specific config
 [[ -f "$HOME/.dotfiles-v2/shell/macos/exports" ]] && source "$HOME/.dotfiles-v2/shell/macos/exports"
 [[ -f "$HOME/.dotfiles-v2/shell/macos/aliases" ]] && source "$HOME/.dotfiles-v2/shell/macos/aliases"
 [[ -f "$HOME/.dotfiles-v2/shell/macos/functions" ]] && source "$HOME/.dotfiles-v2/shell/macos/functions"
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line

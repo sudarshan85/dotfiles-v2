@@ -43,3 +43,5 @@ alias tk='tmux kill-session -t'
 # --- utilities ---
 alias wget='wget -c'
 alias grep='grep -n --color'
+
+alias tr='tree -a'

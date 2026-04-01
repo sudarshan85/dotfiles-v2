@@ -1,0 +1,7 @@
+alias ls='ls -G'
+alias ll='ls -lahG'
+alias la='ls -AG'
+alias l='ls -CFG'
+if command -v ggrep >/dev/null 2>&1; then
+  alias grep='ggrep -n --color=auto'
+fi
