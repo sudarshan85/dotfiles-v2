@@ -1,0 +1,14 @@
+# create directory and cd into it
+mkcd() {
+  mkdir -p "$1" && cd "$1"
+}
+
+# quick search in files
+fsearch() {
+  grep -RIn "$1" .
+}
+
+# activate a local virtual environment
+act() {
+  source "$1/bin/activate"
+}

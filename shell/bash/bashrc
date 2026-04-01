@@ -1,0 +1,20 @@
+HISTFILE="$HOME/.bash_history"
+HISTSIZE=10000
+HISTCONTROL=ignoredups:ignorespace
+shopt -s histappend
+shopt -s checkwinsize
+
+# --- prompt ---
+PS1='\u@\h:\w\$ '
+
+# --- source shared config ---
+[ -f "$HOME/.dotfiles-v2/shell/common/exports" ] && source "$HOME/.dotfiles-v2/shell/common/exports"
+[ -f "$HOME/.dotfiles-v2/shell/common/aliases" ] && source "$HOME/.dotfiles-v2/shell/common/aliases"
+[ -f "$HOME/.dotfiles-v2/shell/common/functions" ] && source "$HOME/.dotfiles-v2/shell/common/functions"
+
+# --- source Linux-specific config ---
+[ -f "$HOME/.dotfiles-v2/shell/linux/exports" ] && source "$HOME/.dotfiles-v2/shell/linux/exports"
+[ -f "$HOME/.dotfiles-v2/shell/linux/aliases" ] && source "$HOME/.dotfiles-v2/shell/linux/aliases"
+[ -f "$HOME/.dotfiles-v2/shell/linux/functions" ] && source "$HOME/.dotfiles-v2/shell/linux/functions"
+
+

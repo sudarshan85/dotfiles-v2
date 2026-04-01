@@ -1,0 +1,48 @@
+# --- navigation / ls ---
+alias ll='ls -lah'
+alias la='ls -A'
+alias l='ls -CF'
+
+# --- safer defaults ---
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+# --- editor ---
+alias vi='vim'
+alias vimrc='vim ~/.vimrc'
+alias zshrc='vim ~/.zshrc'
+alias bashrc='vim ~/.bashrc'
+alias tmuxconf='vim ~/.tmux.conf'
+
+# --- git ---
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git pull'
+alias gd='git diff'
+alias gb='git branch'
+alias gco='git checkout'
+alias gitsync='git fetch upstream; git checkout master; git merge upstream/master; git push origin master'
+
+# --- python / uv ---
+alias emk='uv venv'
+alias dact='deactivate'
+alias ei='uv pip install'
+alias eu='uv pip uninstall'
+alias jnote='jupyter notebook --ip=127.0.0.1 --no-browser'
+alias jlab='jupyter lab --ip=127.0.0.1 --no-browser'
+
+# --- tmux ---
+alias tnew='tmux new -s'
+alias ta='tmux attach -t'
+alias tatt='tmux attach -t'
+alias tls='tmux list-sessions'
+alias tkill='tmux kill-session -t'
+
+# --- utilities ---
+alias wget='wget -c'
+alias grep='grep -n --color'
+alias yd='yt-dlp -x --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias ydp='yt-dlp -x --audio-format mp3 -o "%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"'

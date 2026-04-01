@@ -1,0 +1,34 @@
+# --- linux / wsl specific utilities ---
+alias mem='watch -n 5 free -m'
+alias ctrlc='xclip -sel clip'
+alias pytree='tree -I "__pycache__|.*" --charset=ascii | sed -e "s/\[.*\]//g" -e "s/^ *//g"'
+
+# --- apt / package management ---
+alias info='apt-cache show'
+alias cla='sudo apt update; sudo apt -y upgrade; sudo apt -y dist-upgrade; sudo apt -y autoremove; sudo apt autoclean; cd; clear'
+alias ins='sudo apt install'
+alias rem='sudo apt remove'
+alias auto='sudo apt autoremove'
+alias sr='apt-cache search -n'
+
+# --- gcloud ---
+alias gstart='gcloud compute instances start'
+alias gstop='gcloud compute instances stop'
+alias gls='gcloud compute instances list'
+
+# --- file display / storage ---
+alias du='du -kh'
+alias df='df -kTh'
+
+# --- GNU ls family ---
+alias ls='ls -h --color'
+alias lx='ls -lXB'
+alias lk='ls -lSr'
+alias lt='ls -ltr'
+alias lc='ls -ltcr'
+alias lu='ls -ltur'
+alias ll='ls -lv --group-directories-first'
+alias lm='ll | more'
+alias lr='ll -R'
+alias la='ll -A'
+alias tree='tree -Csuh'
