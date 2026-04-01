@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# temp files
+*.swp
+*.swo
+*~
+
+# local overrides (future)
+*.local
