@@ -20,7 +20,7 @@ zstyle ':completion:*' menu select
 # prompt (mac version of your bash prompt)
 autoload -Uz colors && colors
 setopt PROMPT_SUBST
-PROMPT='%B%F{green}[%n@%m %1~]%% %f%b '
+PROMPT='%F{cyan}%n%f%F{blue}%B@%m %1~%b%f %# '
 
 # keybindings
 bindkey -e
