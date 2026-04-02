@@ -14,7 +14,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 # prompt
-PS1='\[\e[1;36m\]\u\[\e[0m\]\[\e[38;5;81m\]@\h \W\[\e[0m\]\$ '
+PS1='\[\e[1;36m\]\u\[\e[0m\]\[\e[38;5;141m\]@\h \W\[\e[0m\]\$ '
 
 # source common config
 [ -f "$HOME/.dotfiles-v2/shell/common/exports" ] && source "$HOME/.dotfiles-v2/shell/common/exports"
